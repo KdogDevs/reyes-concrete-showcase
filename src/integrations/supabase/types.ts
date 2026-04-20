@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      media_assets: {
+        Row: {
+          caption: string | null
+          created_at: string
+          height: number | null
+          id: string
+          is_featured: boolean
+          kind: Database["public"]["Enums"]["media_kind"]
+          public_url: string
+          service: Database["public"]["Enums"]["service_slug"]
+          sort_order: number
+          storage_path: string
+          updated_at: string
+          width: number | null
+        }
+        Insert: {
+          caption?: string | null
+          created_at?: string
+          height?: number | null
+          id?: string
+          is_featured?: boolean
+          kind: Database["public"]["Enums"]["media_kind"]
+          public_url: string
+          service: Database["public"]["Enums"]["service_slug"]
+          sort_order?: number
+          storage_path: string
+          updated_at?: string
+          width?: number | null
+        }
+        Update: {
+          caption?: string | null
+          created_at?: string
+          height?: number | null
+          id?: string
+          is_featured?: boolean
+          kind?: Database["public"]["Enums"]["media_kind"]
+          public_url?: string
+          service?: Database["public"]["Enums"]["service_slug"]
+          sort_order?: number
+          storage_path?: string
+          updated_at?: string
+          width?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +67,18 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      media_kind: "photo" | "video"
+      service_slug:
+        | "hero"
+        | "stamped_concrete"
+        | "curb_gutter"
+        | "concrete_repair"
+        | "concrete_flatwork"
+        | "plumbing"
+        | "bobcat"
+        | "dump_truck"
+        | "lot_clearing"
+        | "general"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +205,20 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      media_kind: ["photo", "video"],
+      service_slug: [
+        "hero",
+        "stamped_concrete",
+        "curb_gutter",
+        "concrete_repair",
+        "concrete_flatwork",
+        "plumbing",
+        "bobcat",
+        "dump_truck",
+        "lot_clearing",
+        "general",
+      ],
+    },
   },
 } as const
