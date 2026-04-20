@@ -96,32 +96,15 @@ function Index() {
           </div>
         </section>
 
-        {/* Stat strip */}
-        <section className="border-y border-black/5 bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              ["10+", "Years experience"],
-              ["100%", "Locally owned"],
-              ["7", "Service offerings"],
-              ["2", "Counties served"],
-            ].map(([k, v]) => (
-              <div key={v}>
-                <div className="text-3xl md:text-4xl font-semibold tracking-tight text-brand-red">{k}</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{v}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Services preview */}
         <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="max-w-3xl">
             <div className="text-xs font-medium uppercase tracking-[0.2em] text-brand-red">What we do</div>
             <h2 className="mt-4 text-4xl md:text-6xl font-semibold tracking-tighter">
-              Built for West Alabama.
+              From dirt to finish — one crew.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-              From decorative stamped patios in Tuscaloosa to curb and gutter work in Northport, we bring craftsmanship and the right equipment to every job.
+              Stamped patios in Tuscaloosa, curb and gutter in Northport, full site prep across West Alabama. We bring craftsmanship and the right equipment to every job.
             </p>
           </div>
           <div className="mt-16 grid gap-8">
