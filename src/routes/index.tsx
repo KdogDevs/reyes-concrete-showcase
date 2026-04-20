@@ -2,9 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ServiceCard } from "@/components/ServiceCard";
-import { services } from "@/lib/services";
-import hero from "@/assets/hero-concrete.jpg";
+import { services, heroVideo, heroPoster } from "@/lib/services";
 import { ArrowRight, Phone, MapPin, Shield } from "lucide-react";
+
+const hero = heroPoster;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,11 +53,15 @@ function Index() {
       <main>
         {/* Hero */}
         <section className="relative isolate overflow-hidden">
-          <img
-            src={hero}
-            alt="Freshly poured concrete driveway in front of a modern home in Northport, AL"
-            width={1920}
-            height={1080}
+          <video
+            src={heroVideo}
+            poster={heroPoster}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Reyes Concrete crew demolishing an old slab"
             className="absolute inset-0 -z-10 h-full w-full object-cover"
           />
           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
