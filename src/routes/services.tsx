@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/services";
-import { Phone } from "lucide-react";
+import { Phone, Truck } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -22,6 +22,11 @@ export const Route = createFileRoute("/services")({
 });
 
 function ServicesPage() {
+  // Show every service that has a real photo as a full card, and render
+  // the dump truck offering as an inline "bubble" instead.
+  const fullCards = services.filter((s) => s.title !== "Dump Truck Services");
+  const dumpTruck = services.find((s) => s.title === "Dump Truck Services");
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -36,11 +41,22 @@ function ServicesPage() {
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
             One crew, one call. Reyes Concrete LLC handles the full scope of concrete and site work for homeowners and contractors across Northport and Tuscaloosa, Alabama.
           </p>
+
+          {dumpTruck && (
+            <div className="mt-10 inline-flex items-center gap-3 rounded-full bg-foreground text-background pl-2 pr-5 py-2 text-sm shadow-[var(--shadow-soft)]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-red text-white">
+                <Truck size={16} />
+              </span>
+              <span>
+                <span className="font-medium">Also offered:</span> {dumpTruck.title} — {dumpTruck.description.split(".")[0]}.
+              </span>
+            </div>
+          )}
         </section>
 
         <section className="mx-auto max-w-6xl px-6 pb-24 md:pb-32">
           <div className="grid gap-8">
-            {services.map((s, i) => (
+            {fullCards.map((s, i) => (
               <ServiceCard key={s.title} {...s} reverse={i % 2 === 1} />
             ))}
           </div>
