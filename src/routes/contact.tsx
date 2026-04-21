@@ -14,7 +14,10 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:title", content: "Contact Reyes Concrete LLC" },
       { property: "og:description", content: "Free estimates for concrete, plumbing, bobcat, and lot clearing in Northport & Tuscaloosa, AL." },
+      { property: "og:url", content: "https://reyesconcretellc.com/contact" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://reyesconcretellc.com/contact" }],
   }),
   component: ContactPage,
 });

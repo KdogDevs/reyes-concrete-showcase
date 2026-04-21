@@ -20,25 +20,43 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Reyes Concrete LLC — Northport & Tuscaloosa, AL" },
       { property: "og:description", content: "Stamped concrete, curb & gutter, repair, plumbing, bobcat & lot clearing across West Alabama." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://reyesconcretellc.com/" },
+      { property: "og:site_name", content: "Reyes Concrete LLC" },
       { property: "og:image", content: hero },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: hero },
     ],
+    links: [{ rel: "canonical", href: "https://reyesconcretellc.com/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "GeneralContractor",
+          "@id": "https://reyesconcretellc.com/#business",
           name: "Reyes Concrete LLC",
           image: hero,
+          url: "https://reyesconcretellc.com/",
           telephone: "+1-205-331-6719",
           email: "reyessergio589@gmail.com",
-          areaServed: ["Northport, AL", "Tuscaloosa, AL"],
+          areaServed: [
+            { "@type": "City", name: "Northport", addressRegion: "AL" },
+            { "@type": "City", name: "Tuscaloosa", addressRegion: "AL" },
+          ],
           address: { "@type": "PostalAddress", addressLocality: "Northport", addressRegion: "AL", addressCountry: "US" },
           priceRange: "$$",
+          founder: { "@type": "Person", name: "Sergio Reyes" },
           description:
             "Concrete, plumbing, bobcat, dump truck, and lot clearing services in Northport and Tuscaloosa, Alabama.",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Services",
+            itemListElement: [
+              "Stamped Concrete", "Concrete Curb & Gutter", "Concrete Repair",
+              "Concrete Slabs & Flatwork", "Plumbing", "Bobcat Services",
+              "Dump Truck Services", "Small Lot Clearing",
+            ].map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s } })),
+          },
         }),
       },
     ],
@@ -65,17 +83,17 @@ function Index() {
             className="absolute inset-0 -z-10 h-full w-full object-cover"
           />
           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
-          <div className="mx-auto max-w-6xl px-6 pt-40 pb-32 md:pt-56 md:pb-44 text-white">
+          <div className="mx-auto max-w-6xl px-6 pt-32 pb-24 sm:pt-40 sm:pb-32 md:pt-56 md:pb-44 text-white">
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-3 py-1 text-xs font-medium border border-white/20">
                 <MapPin size={12} /> Serving Northport &amp; Tuscaloosa, AL
               </div>
-              <h1 className="mt-6 text-5xl md:text-7xl font-semibold tracking-tighter max-w-4xl leading-[1.02]">
+              <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tighter max-w-4xl leading-[1.05]">
                 Concrete done right.
                 <br />
                 <span className="text-white/60">Every pour. Every project.</span>
               </h1>
-              <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
                 Reyes Concrete LLC delivers stamped concrete, curb &amp; gutter, repair, plumbing, bobcat work, and lot clearing across West Alabama.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">

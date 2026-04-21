@@ -41,8 +41,12 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:title", content: "Project Gallery — Reyes Concrete LLC" },
       { property: "og:description", content: "Photos and videos of recent concrete and site work in Northport and Tuscaloosa, AL." },
       { property: "og:image", content: `${STORAGE}/photos/IMG_3767.jpg` },
+      { property: "og:url", content: "https://reyesconcretellc.com/gallery" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: `${STORAGE}/photos/IMG_3767.jpg` },
     ],
+    links: [{ rel: "canonical", href: "https://reyesconcretellc.com/gallery" }],
   }),
   component: GalleryPage,
 });
