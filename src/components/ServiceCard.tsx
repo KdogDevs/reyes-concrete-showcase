@@ -3,10 +3,12 @@ type Props = {
   eyebrow: string;
   description: string;
   image: string;
+  video?: string;
+  poster?: string;
   reverse?: boolean;
 };
 
-export function ServiceCard({ title, eyebrow, description, image, reverse }: Props) {
+export function ServiceCard({ title, eyebrow, description, image, video, poster, reverse }: Props) {
   return (
     <article className="group rounded-3xl bg-surface overflow-hidden border border-black/5 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elevated)] transition-all duration-500">
       <div className={`grid md:grid-cols-2 ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
@@ -22,12 +24,26 @@ export function ServiceCard({ title, eyebrow, description, image, reverse }: Pro
           </p>
         </div>
         <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-          <img
-            src={image}
-            alt={title}
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
-          />
+          {video ? (
+            <video
+              src={video}
+              poster={poster ?? image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label={title}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+            />
+          ) : (
+            <img
+              src={image}
+              alt={title}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+            />
+          )}
         </div>
       </div>
     </article>
