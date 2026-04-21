@@ -42,7 +42,12 @@ export const Route = createRootRoute({
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c420e17d-d97f-42df-b462-39ab5a8f5006" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c420e17d-d97f-42df-b462-39ab5a8f5006" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "alternate icon", href: "/favicon.svg" },
+      { rel: "apple-touch-icon", href: "/favicon.svg" },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
