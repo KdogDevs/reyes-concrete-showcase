@@ -26,7 +26,14 @@ export const services = [
     eyebrow: "Restoration",
     title: "Concrete Repair",
     description:
-      "Tear-out, slab demolition, resurfacing, and replacement — restoring driveways, patios, and floors to like-new condition.",
+      "Resurfacing, patching, and replacement — restoring driveways, patios, and floors to like-new condition.",
+    image: `${STORAGE}/photos/C235EA04.jpg`,
+  },
+  {
+    eyebrow: "Tear-Out",
+    title: "Concrete Demolition",
+    description:
+      "Slab demolition, driveway and sidewalk tear-out, breaking and hauling of old concrete — clearing the way for your new pour with the right equipment for tight residential lots.",
     image: `${STORAGE}/photos/C235EA04.jpg`,
   },
   {

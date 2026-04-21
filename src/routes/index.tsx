@@ -53,9 +53,9 @@ export const Route = createFileRoute("/")({
             name: "Services",
             itemListElement: [
               "Stamped Concrete", "Concrete Curb & Gutter", "Concrete Repair",
-              "Concrete Slabs & Flatwork", "Residential Plumbing",
-              "Water Heater Installation & Replacement", "Bobcat Services",
-              "Dump Truck Services", "Lot Clearing & Leveling",
+              "Concrete Demolition", "Concrete Slabs & Flatwork",
+              "Residential Plumbing", "Water Heater Installation & Replacement",
+              "Bobcat Services", "Dump Truck Services", "Lot Clearing & Leveling",
             ].map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s } })),
           },
         }),
