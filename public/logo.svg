@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-label="Reyes Concrete LLC">
+  <style>
+    .word { font-family: 'Rye', 'Playfair Display', Georgia, serif; font-weight: 900; fill: #111; }
+    .llc  { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; fill: #c0392b; }
+    .mark { fill: #111; }
+    .bg   { fill: #ffffff; }
+  </style>
+  <g class="mark" transform="translate(0,8)">
+    <path d="M8 8 L26 22 L34 32 L40 40 L36 44 L28 36 L20 28 L4 14 Z"/>
+    <path d="M36 38 L48 44 L46 52 L34 48 Z"/>
+    <rect x="14" y="34" width="22" height="14" rx="2"/>
+    <rect class="bg" x="18" y="36" width="6" height="6" opacity="0.9"/>
+    <rect x="6" y="48" width="44" height="8" rx="2"/>
+    <rect x="4" y="56" width="48" height="6" rx="3"/>
+    <circle class="bg" cx="10" cy="59" r="2.5"/>
+    <circle class="bg" cx="46" cy="59" r="2.5"/>
+  </g>
+  <text class="word" x="78" y="38" font-size="30" letter-spacing="1">REYES</text>
+  <text class="word" x="78" y="68" font-size="22" letter-spacing="0.5">CONCRETE</text>
+  <text class="llc"  x="246" y="68" font-size="14">LLC</text>
+  <rect x="78" y="76" width="180" height="2" fill="#c0392b"/>
+</svg>
