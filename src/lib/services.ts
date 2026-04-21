@@ -69,7 +69,7 @@ export const services = [
     title: "Lot Clearing & Leveling",
     description:
       "Tree and brush removal, stump-out, dirt work, fine grading, and full lot leveling for new builds, additions, pole barns, driveways, and outdoor living projects across West Alabama.",
-    image: `${STORAGE}/photos/IMG_1510.jpg`,
-    video: `${STORAGE}/videos/IMG_1551.mp4`,
+    image: `${STORAGE}/videos/tree_falling_poster.jpg`,
+    video: `${STORAGE}/videos/tree_falling.mp4`,
   },
 ] as const;
