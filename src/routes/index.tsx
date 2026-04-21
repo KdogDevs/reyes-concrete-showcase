@@ -14,11 +14,11 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Reyes Concrete LLC offers stamped concrete, curb & gutter, concrete repair, plumbing, bobcat work, dump truck hauling, and small lot clearing in Northport and Tuscaloosa, Alabama. Call 205-331-6719.",
+          "Reyes Concrete LLC offers stamped concrete, curb & gutter, concrete repair, lot clearing & leveling, residential plumbing and water heater installation, bobcat work, and dump truck hauling in Northport and Tuscaloosa, Alabama. Call 205-331-6719.",
       },
-      { name: "keywords", content: "concrete Northport AL, concrete Tuscaloosa, stamped concrete Tuscaloosa, concrete curb and gutter Northport, concrete repair Tuscaloosa, bobcat services Northport, dump truck Tuscaloosa, lot clearing Northport, plumbing Tuscaloosa, Reyes Concrete LLC" },
+      { name: "keywords", content: "concrete Northport AL, concrete Tuscaloosa, stamped concrete Tuscaloosa, concrete curb and gutter Northport, concrete repair Tuscaloosa, bobcat services Northport, dump truck Tuscaloosa, lot clearing Northport, lot leveling Tuscaloosa, land grading Northport, residential plumbing Tuscaloosa, water heater installation Northport, water heater replacement Tuscaloosa, Reyes Concrete LLC" },
       { property: "og:title", content: "Reyes Concrete LLC — Northport & Tuscaloosa, AL" },
-      { property: "og:description", content: "Stamped concrete, curb & gutter, repair, plumbing, bobcat & lot clearing across West Alabama." },
+      { property: "og:description", content: "Stamped concrete, curb & gutter, repair, residential plumbing & water heaters, bobcat work, lot clearing & leveling across West Alabama." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://reyesconcretellc.com/" },
       { property: "og:site_name", content: "Reyes Concrete LLC" },
@@ -47,14 +47,15 @@ export const Route = createFileRoute("/")({
           priceRange: "$$",
           founder: { "@type": "Person", name: "Sergio Reyes" },
           description:
-            "Concrete, plumbing, bobcat, dump truck, and lot clearing services in Northport and Tuscaloosa, Alabama.",
+            "Concrete, residential plumbing and water heaters, bobcat, dump truck, and lot clearing & leveling services in Northport and Tuscaloosa, Alabama.",
           hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: "Services",
             itemListElement: [
               "Stamped Concrete", "Concrete Curb & Gutter", "Concrete Repair",
-              "Concrete Slabs & Flatwork", "Plumbing", "Bobcat Services",
-              "Dump Truck Services", "Small Lot Clearing",
+              "Concrete Slabs & Flatwork", "Residential Plumbing",
+              "Water Heater Installation & Replacement", "Bobcat Services",
+              "Dump Truck Services", "Lot Clearing & Leveling",
             ].map((s) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: s } })),
           },
         }),
@@ -94,7 +95,7 @@ function Index() {
                 <span className="text-white/60">Every pour. Every project.</span>
               </h1>
               <p className="mt-5 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
-                Reyes Concrete LLC delivers stamped concrete, curb &amp; gutter, repair, plumbing, bobcat work, and lot clearing across West Alabama.
+                Reyes Concrete LLC delivers stamped concrete, curb &amp; gutter, repair, full residential plumbing &amp; water heaters, bobcat work, and lot clearing &amp; leveling across West Alabama.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
                 <a
@@ -122,7 +123,7 @@ function Index() {
               From dirt to finish — one crew.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-              Stamped patios in Tuscaloosa, curb and gutter in Northport, full site prep across West Alabama. We bring craftsmanship and the right equipment to every job.
+              Stamped patios in Tuscaloosa, curb and gutter in Northport, lot clearing and leveling, residential plumbing and water heater installs, plus full site prep across West Alabama. We bring craftsmanship and the right equipment to every job.
             </p>
           </div>
           <div className="mt-16 grid gap-8">

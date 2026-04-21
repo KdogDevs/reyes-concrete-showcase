@@ -12,10 +12,10 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Stamped concrete, concrete curb & gutter, concrete repair, plumbing, bobcat work, dump truck services, and small lot clearing in Northport, Tuscaloosa, and West Alabama.",
+          "Stamped concrete, curb & gutter, concrete repair, residential plumbing & water heater installation, bobcat work, dump truck services, and lot clearing & leveling in Northport, Tuscaloosa, and West Alabama.",
       },
       { property: "og:title", content: "Services — Reyes Concrete LLC" },
-      { property: "og:description", content: "Concrete, plumbing, bobcat, dump truck, and lot clearing in Northport & Tuscaloosa, AL." },
+      { property: "og:description", content: "Concrete, residential plumbing & water heaters, bobcat, dump truck, lot clearing & leveling in Northport & Tuscaloosa, AL." },
       { property: "og:url", content: "https://reyesconcretellc.com/services" },
       { property: "og:type", content: "website" },
     ],

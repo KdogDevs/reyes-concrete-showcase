@@ -37,10 +37,10 @@ export const services = [
     image: `${STORAGE}/photos/IMG_0351.jpg`,
   },
   {
-    eyebrow: "Underground Utilities",
-    title: "Plumbing",
+    eyebrow: "Residential Plumbing",
+    title: "Plumbing & Water Heaters",
     description:
-      "Underground plumbing rough-in, water and sewer line installation, and trench work coordinated with your concrete project.",
+      "Full residential plumbing services — water heater installation and replacement, repipes, leak repair, fixture installation, drain and sewer line work, and underground rough-in coordinated with your concrete project.",
     image: `${STORAGE}/photos/2092BBAC.jpg`,
   },
   {
@@ -59,9 +59,9 @@ export const services = [
   },
   {
     eyebrow: "Land Prep",
-    title: "Small Lot Clearing",
+    title: "Lot Clearing & Leveling",
     description:
-      "Brush removal, grading, and lot prep for new builds, additions, pole barns, and outdoor living projects.",
+      "Tree and brush removal, stump-out, dirt work, fine grading, and full lot leveling for new builds, additions, pole barns, driveways, and outdoor living projects across West Alabama.",
     image: `${STORAGE}/photos/IMG_1510.jpg`,
   },
 ] as const;
