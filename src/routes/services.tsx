@@ -16,7 +16,10 @@ export const Route = createFileRoute("/services")({
       },
       { property: "og:title", content: "Services — Reyes Concrete LLC" },
       { property: "og:description", content: "Concrete, plumbing, bobcat, dump truck, and lot clearing in Northport & Tuscaloosa, AL." },
+      { property: "og:url", content: "https://reyesconcretellc.com/services" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://reyesconcretellc.com/services" }],
   }),
   component: ServicesPage,
 });
