@@ -50,11 +50,12 @@ export function SiteHeader() {
           </a>
         </nav>
         <button
-          aria-label="Menu"
-          className="md:hidden p-2"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          className="md:hidden inline-flex h-11 w-11 items-center justify-center -mr-2"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
       {open && (
