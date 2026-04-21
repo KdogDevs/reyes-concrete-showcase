@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -26,9 +27,9 @@ export function SiteHeader() {
         scrolled ? "glass-nav border-b border-black/5" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
-        <Link to="/" className="font-semibold tracking-tight text-[15px]">
-          Reyes Concrete <span className="text-brand-red">LLC</span>
+      <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+        <Link to="/" aria-label="Reyes Concrete LLC — Home" className="flex items-center">
+          <Logo className="h-9 w-auto text-foreground" />
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-[13px] text-foreground/80">
           {nav.map((n) => (
