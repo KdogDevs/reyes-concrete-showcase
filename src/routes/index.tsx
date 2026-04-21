@@ -83,17 +83,17 @@ function Index() {
             className="absolute inset-0 -z-10 h-full w-full object-cover"
           />
           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
-          <div className="mx-auto max-w-6xl px-6 pt-40 pb-32 md:pt-56 md:pb-44 text-white">
+          <div className="mx-auto max-w-6xl px-6 pt-32 pb-24 sm:pt-40 sm:pb-32 md:pt-56 md:pb-44 text-white">
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-3 py-1 text-xs font-medium border border-white/20">
                 <MapPin size={12} /> Serving Northport &amp; Tuscaloosa, AL
               </div>
-              <h1 className="mt-6 text-5xl md:text-7xl font-semibold tracking-tighter max-w-4xl leading-[1.02]">
+              <h1 className="mt-6 text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tighter max-w-4xl leading-[1.05]">
                 Concrete done right.
                 <br />
                 <span className="text-white/60">Every pour. Every project.</span>
               </h1>
-              <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
+              <p className="mt-5 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed">
                 Reyes Concrete LLC delivers stamped concrete, curb &amp; gutter, repair, plumbing, bobcat work, and lot clearing across West Alabama.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
